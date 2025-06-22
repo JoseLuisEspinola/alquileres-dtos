@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="Imagen/jpg" href="/img/logo-alquileres.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Alquileres</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Incluir la biblioteca de ScrollReveal --> 
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <!-- Barra de navegacion o NavBar -->
+    <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </label>
+        <a href="disenador.html" class="enlace">
+            <img src="./img/logo-alquileres.png" class="logo" alt="Imagen Logo">
+            <div class="names">
+                <span class="main-name">Alquileres</span>
+                <span class="main-namesito">Gustavo Riccio</span>
+            </div>
+        </a>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-home" title="Inicio"></i></a></li>
+            <li><a href="nosotros.html#section-nosotros">Nosotros</a></li>
+            <li><a href="#section-departamentos">Disponibles</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="fotogaleria.html">Fotogaleria</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="#section-form">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- JavaScript donde se captura la parte de arriba de la pagina: header-->
+    <script>
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("nav");
+            header.classList.toggle("abajo", window.scrollY>0);
+        })
+    </script>    
+
+    <!-- Zona central de la primer pagina -->
+    <section id="zona1">
+        <div class="presentacion">
+            <div class="card-pres text">
+                <h2>¡Es mucho más que mudarte!</h2>
+                <p>Tu próximo espacio te está esperando. Este proyecto busca reunir, 
+                   en un solo lugar, opciones de alquileres cómodos, bien ubicadas y 
+                   económicamente accesibles, ofrecidos directamente por un único 
+                   propietario y sin pagar expensas. Pensado para quienes valoran lo 
+                   práctico y lo simple. Conecta personas con viviendas funcionales 
+                   en distintas zonas."
+                </p>
+                <a class="btn-contacto" href="#section-departamentos">Visualiza</a>
+                <a class="btn-contacto"          href="#section-form">Contactos</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- departamentos disponibles -->
+    <section id="section-departamentos">
+        <h2 class="title-card-section">Departamentos Disponibles</h2>
+        <section class="buscar-card">
+            <label for="buscador">Por tipo:</label>
+            <input type="text" id="buscador" placeholder="Buscar...">
+        </section>
+        <p id="mensaje-vacio" class="mensaje-oculto">😕 No se encontraron resultados...</p>
+
+        <div class="card-container">
+            <!-- card1 -->
+            <!-- <article class="card-article">
+                <div class="card-img">
+                    <img src="/img/galeria/dto1-1.jpeg" alt="Proyecto1">
+                </div>
+                <div class="card-title">
+                    <h3>Monoambiente</h3>
+                    <h4>$300.000/mes</h4>
+                </div>
+                <div class="card-description">
+                    <p>Monoambiente ubicado en Pilar, ideal para personal
+                       sola o pareja sin hijos. No se aceptan mascotas.
+                       Estoy agregando un renglon mas, para ver como 
+                       se comporta el scroll.
+                    </p>
+                </div>
+                <div class="card-icons">
+                    <span>📏30 m²</span>
+                    <span>🛏️1 amb</span>
+                    <span>⭐ 6/10</span>
+                </div>
+                <div class="card-btns">
+                    <a href="" class="boton">Ver Mas</a>
+                </div>
+            </article> -->
+            <!-- card2 -->
+            <article class="card-article">
+                <div class="card-img">
+                    <img src="/img/galeria/dto2-1.jpeg" alt="Proyecto1">
+                </div>
+                <div class="card-title">
+                    <h3>2 Ambientes</h3>
+                    <h4>$460.000/mes</h4>
+                </div>
+                <div class="card-description">
+                    <p> Este departamento de 2 ambientes ubicado en Pilar, ideal para personal
+                        sola o pareja sin hijos. No se aceptan mascotas.
+                        Una gran ubicacón.
+                    </p>
+                </div>
+                <div class="card-icons">
+                    <span>📏50 m²</span>
+                    <span>🛏️2 amb</span>
+                    <span>⭐ 9/10</span>
+                </div>
+                <div class="card-btns">
+                    <a href="" class="boton">Ver Mas</a>
+                </div>
+            </article>
+            <!-- card3 -->
+            <article class="card-article">
+                <div class="card-img">
+                    <img src="/img/galeria/dto3-1.jpeg" alt="Proyecto1">
+                </div>
+                <div class="card-title">
+                    <h3>Monoambiente</h3>
+                    <h4>$340.000/mes</h4>
+                </div>
+                <div class="card-description">
+                    <p>Monoambiente ubicado en Pilar, ideal para personal
+                        sola o pareja sin hijos. No se aceptan mascotas. una
+                        excelente ubicación.
+                    </p>
+                </div>
+                <div class="card-icons">
+                    <span>📏35 m²</span>
+                    <span>🛏️1 amb</span>
+                    <span>⭐ 7/10</span>
+                </div>
+                <div class="card-btns">
+                    <a href="" class="boton">Ver Mas</a>
+                </div>
+            </article>
+            <!-- card4 -->
+            <article class="card-article">
+                <div class="card-img">
+                    <img src="/img/galeria/dto4-1.jpeg" alt="Proyecto1">
+                </div>
+                <div class="card-title">
+                    <h3>2 Ambientes</h3>
+                    <h4>$450.000/mes</h4>
+                </div>
+                <div class="card-description">
+                    <p>Monoambiente ubicado en Pilar, ideal para personal
+                       sola o pareja sin hijos. No se aceptan mascotas.
+                    </p>
+                </div>
+                <div class="card-icons">
+                    <span>📏55 m²</span>
+                    <span>🛏️2 amb</span>
+                    <span>⭐ 8/10</span>
+                </div>
+                <div class="card-btns">
+                    <a href="" class="boton">Ver Mas</a>
+                </div>
+            </article>
+            <!-- card5 -->
+            <article class="card-article">
+                <div class="card-img">
+                    <img src="/img/galeria/dto5-1.jpeg" alt="Proyecto1">
+                </div>
+                <div class="card-title">
+                    <h3>Monoambiente</h3>
+                    <h4>$320.000/mes</h4>
+                </div>
+                <div class="card-description">
+                    <p>Monoambiente ubicado en Pilar, ideal para personal
+                        sola o pareja sin hijos. No se aceptan mascotas.
+                        Monoambiente ubicado en Pilar, ideal para personal
+                        sola o pareja sin hijos. No se aceptan mascotas.
+                    </p>
+                </div>
+                <div class="card-icons">
+                    <span>📏32 m²</span>
+                    <span>🛏️1 amb</span>
+                    <span>⭐ 7/10</span>
+                </div>
+                <div class="card-btns">
+                    <a href="" class="boton">Ver Mas</a>
+                </div>
+            </article>
+            <!-- card6 -->
+            <article class="card-article">
+                <div class="card-img">
+                    <img src="/img/galeria/dto6-1.jpeg" alt="Proyecto1">
+                </div>
+                <div class="card-title">
+                    <h3>2 Ambientes</h3>
+                    <h4>$440.000/mes</h4>
+                </div>
+                <div class="card-description">
+                    <p>Un excelente departamento de 2 Ambiente ubicado en Pilar, 
+                        ideal para persona sola o pareja sin hijos. Se aceptan 
+                        mascotas pequeñas.
+                    </p>
+                </div>
+                <div class="card-icons">
+                    <span>📏50 m²</span>
+                    <span>🛏️2 amb</span>
+                    <span>⭐ 7/10</span>
+                </div>
+                <div class="card-btns">
+                    <a href="" class="boton">Ver Mas</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Section Servicios -->
+    <section class="section-servicios">
+        <h2 class="title-service">Detalles</h2>
+        <div class="card">
+            <div class="card-text">
+                <h2>Alquiler de departamentos de calidad</h2>
+                <p>En todos los Alquileres ofrecemos departamentos modernos y confortables 
+                    para alquileres en Pilar, y alrededores. Contamos con una amplia variedad 
+                    de opciones para que encuentres tu espacio ideal. Nuestro equipo te brinda
+                    atención personalizada y un proceso ágil para que disfrutes tu nuevo hogar
+                    sin complicaciones.<strong>Los departamento cuentan con:</strong></p>
+                <div class="lista1">
+                    <p>> Mesada con bacha</p>
+                    <p>> Cocina a garrafa</p>
+                    <p>> Baños individual</p>
+                </div>
+                <a href="#section-departamentos">Ver todos los alquileres <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="card-image">
+                <img src="/img/galeria/dto5-1.jpeg" alt="foto1">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-text">
+                <h2>Tu próximo departamento te espera</h2>
+                <p>Te ayudamos a encontrar el departamento perfecto en Pilar y alrrededores
+                    Te ofrecemos opciones para todos los estilos de vida, con ubicaciones 
+                    convenientes y servicios pensados para tu comodidad. Nuestro compromiso 
+                    es acompañarte en todo el proceso, facilitando cada paso para que tu 
+                    experiencia de alquiler sea <strong>simple y segura</strong>.</p>
+                <div class="lista1">
+                    <p>> Variedad de tamaños y estilos</p>
+                    <p>> Asesoramiento profesional</p>
+                    <p>> Procesos rápidos y transparentes</p>
+                </div>
+                <a href="#section-departamentos">Ver todos los alquileres<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="card-image">
+                <img src="/img/galeria/dto2-1.jpeg" alt="foto2">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pequeña galeria -->
+    <section class="section-galeria">
+        <div class="container-galeria">
+            <div class="card-galeria">
+                <img src="/img/galeria/dto1-1.jpeg" alt="Imagen 2" class="imagen">
+            </div>
+            <div class="card-galeria">
+                <img src="/img/galeria/dto2-1.jpeg" alt="Imagen 3" class="imagen">
+            </div>
+            <div class="card-galeria">
+                <img src="/img/galeria/dto3-1.jpeg" alt="Imagen 4" class="imagen">
+            </div>
+            <div class="card-galeria">
+                <img src="/img/galeria/dto4-1.jpeg" alt="Imagen 5" class="imagen">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section RENUEVA -->
+    <section class="section-renueva">
+        <h2>¡Ecuentra tu hogar!</h2>
+        <div class="container-renueva">
+            <img src="/img/galeria/dto6-1.jpeg" class="galeria-img1" alt="galeria Img1">
+            <img src="/img/galeria/dto5-1.jpeg" class="galeria-img2" alt="galeria Img1">
+            <img src="/img/galeria/dto4-1.jpeg" class="galeria-img3" alt="galeria Img1">
+            <img src="/img/galeria/dto3-1.jpeg" class="galeria-img4" alt="galeria Img1">
+        </div>
+        <a href="/fotogaleria.html#container-gallery" class="btn-renueva">Fotogalería</a>
+    </section>
+
+
+    <!-- Preguntas frecuentes -->
+    <section class="questions container" id="questions_id">
+        <h2 class="titulo-preguntas">Preguntas frecuentes</h2>
+        <p class="questions_paragraph">Estas son algunas de las preguntas más 
+            frecuentes que nos hacen sobre nuestros alquileres.</p>
+
+        <section class="questions_container">
+            <article class="questions_padding">
+                <div class="questions_answer">
+                    <h3 class="questions_title">¿Qué documentos necesito para alquilar un departamento?
+                        <span class="questions_arrow">
+                            <img src="/img/arrow.svg" class="questions_img">
+                        </span>
+                    </h3>
+
+                    <p class="questions_show">Generalmente se solicita DNI, comprobante de ingresos y 
+                        garantía propietaria o seguro de caución. Consultá por requisitos específicos 
+                        según cada propiedad.</p>
+                </div>
+            </article>
+
+            <article class="questions_padding">
+                <div class="questions_answer">
+                    <h3 class="questions_title">¿Los departamentos se entregan amueblados?
+                        <span class="questions_arrow">
+                            <img src="/img/arrow.svg" class="questions_img">
+                        </span>
+                    </h3>
+
+                    <p class="questions_show">Los departamentos no se entregan amueblados. Generalmente 
+                        tienen mesada con bacha, termotanque eléctrico, cocina a garrafa y baño individual.</p>
+                </div>
+            </article>
+
+            <article class="questions_padding">
+                <div class="questions_answer">
+                    <h3 class="questions_title">¿Cuáles son los plazos mínimos de alquiler?
+                        <span class="questions_arrow">
+                            <img src="/img/arrow.svg" class="questions_img">
+                        </span>
+                    </h3>
+
+                    <p class="questions_show">El plazo mínimo suele ser de 12 meses a 24 meses, pero 
+                        también contamos con alternativas para estadías temporarias. Consultá disponibilidad.</p>
+                </div>
+            </article>
+
+            <article class="questions_padding">
+                <div class="questions_answer">
+                    <h3 class="questions_title">¿Cuál el la frecuentemente para realizar la limpieza de fachadas y techos?
+                        <span class="questions_arrow">
+                            <img src="/img/arrow.svg" class="questions_img">
+                        </span>
+                    </h3>
+
+                    <p class="questions_show">Recomendamos realizar una limpieza profunda al menos una vez al año, 
+                        aunque puede variar según el clima, la exposición a contaminantes y el tipo de material.</p>
+                </div>
+            </article>
+
+            <article class="questions_padding">
+                <div class="questions_answer">
+                    <h3 class="questions_title">¿Qué gastos están incluidos en el alquiler?
+                        <span class="questions_arrow">
+                            <img src="/img/arrow.svg" class="questions_img">
+                        </span>
+                    </h3>
+
+                    <p class="questions_show">En algunos casos muy específicos, el alquiler incluye expensas y 
+                        servicios básicos. Pero la mayoría NO tiene gastos de expensas. Los gastos de Energía 
+                        Eléctica NO esta incluído en el pago mensual del contrato, por lo tanto se debe pagar 
+                        aparte.</p>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="questions_offer">
+            <h2 class="subtitle2">¡Encontrá el departamento ideal para vos! ¿Listo para mudarte?</h2>
+            <p class="questions_copy">Nosotros, te ayudamos a dar el siguiente paso y encontrar el 
+                departamento perfecto en Pilar y alrededores. Ofrecemos una amplia variedad de opciones, 
+                con ubicaciones estratégicas y servicios pensados para tu comodidad. Nuestro equipo te 
+                acompaña en todo el proceso, brindando asesoramiento profesional y soluciones a medida. 
+                Disfrutá de una experiencia de alquiler simple, segura y transparente. ¡Confiá en nosotros 
+                para empezar una nueva etapa en tu vida!</p>
+            <a href="precios.html" class="btn-aprende">¡Comencemos!</a>
+        </section>
+    </section>
+
+
+    <!-- ********** FORMULARIO ********** -->
+    <section id="section-form">
+        <h2 class="titulo-form">Contacto</h2>
+
+        <div class="container-maps_form">
+            
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4125.233774464203!2d-58.90830704526535!3d-34.45453235870867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9cdaff91a60b%3A0x210325890b9d4d43!2sJuan%20B.%20Justo%20%26%2025%20de%20Mayo%2C%20B1629%20Pilar%2C%20Provincia%20de%20Buenos%20Aires!5e1!3m2!1ses-419!2sar!4v1741993290975!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        
+            <form id="form-contacto" action="https://formspree.io/f/mvgperpl" method="POST">
+                <p class="anotate">¿Necesitas <abbr title="attribute">comunicarte</abbr> con nosotros?</p>
+                <input id="nombre" class="nombre" type="text" name="nombre" placeholder="Nombres *">
+
+                <input id="telefono" type="tel" name="telefono" placeholder="Telefono *">
+
+                <input id="email" class="email" type="email" name="email" placeholder="Correo *">
+
+                <textarea id="mensaje" name="mensaje" placeholder="Escriba aquí su mensaje *"></textarea>
+
+                <div class="aceptar">
+                    <label for="check-priv" class="text-priv">
+                        <input type="checkbox" id="check-priv" required>
+                        Acepto se envíen mis datos
+                    </label>
+                </div>
+                <div class="botones">
+                    <input type="submit" class="btn btn-grabar" title="Enviar el formulario" value="Enviar">
+                    <input type="reset" class="btn btn-limpiar" title="Limpia los campos" value="Limpiar">
+                </div>
+            </form>
+            
+        </div>
+    </section>
+
+
+    <!-- ********* Seccion de footer ******** -->
+    <footer class="footer-container">
+        <div class="container-box">
+
+            <div class="box-footer">
+                <h3 class="title-box">Horarios</h3>
+                <p class="dias">Lunes a viernes:</p>
+                <p class="horas">08:00 hs a 16:00 hs</p>
+                <br>
+                <p class="dias">Sábados:</p>
+                <p class="horas">08:00 hs a 12:00 hs</p>                
+            </div>
+
+            <div class="box-footer">
+                <h3 class="title-box">Enlaces</h3>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="fotogaleria.html">Fotogalería</a></li>
+                    <li><a href="precios.html">Precios</a></li>
+                    <li><a href="#section-form">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="box-footer">
+                <h3 class="title-box">Sociales</h3>
+                <div class="sociales">
+                    <a href="https:" target="_blank" title="Ir a Twitter">
+                        <img class="linkedin" src="./img/twitter.png" alt="Twitter"> Twitter
+                    </a>
+                    <a href="https:" target="_blank" title="Ir a Instagram">
+                        <img class="github" src="./img/instagram.png" alt="Instagram"> Instagram
+                    </a>
+                    <a href="https:" target="_blank" title="Ir a Facebook">
+                        <img class="facebook" src="./img/facebook.png" alt="Facebook"> Facebook
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=+543487616158&text=Hola%2C%20me%20gustaría%20realizar%20una%20página%20web...%20podrías%20contarme?" target="_blank" title="Ir a Whatsapp">
+                        <img class="whatsapp" src="./img/Whatsapp.png" alt="Whatsapp">Whatsapp
+                    </a>
+                </div>
+            </div>
+
+            <div class="box-footer">
+                <h3 class="title-box">Otros datos</h3>
+                <div class="otros-datos">
+                    <a href="mailto:jle36@hotmail.com?subject=Consulta&body=Hola%2C%20quisiera%20más%20información%20sobre%20...">
+                        <i class="fa fa-envelope" aria-hidden="true"></i></i>
+                    Email</a>
+                    <p class="telefono"><i class="fa fa-phone" aria-hidden="true"></i> +xx-xx-xxxxxxxx</p>
+                    <p class="direccion"><i class="fa fa-location-arrow" aria-hidden="true"></i> Aquí la dirección</p>
+                    <a class="terminos" href="terminos.html">Términos y condiciones</a>
+                </div>
+            </div>
+
+        </div>
+        <!-- ******** Copyright ******** -->
+        <div class="copy">
+            <!-- <p class="copyright">&copy; <span id="copyright-year"></span> Administración Bourguet - Todos los derechos reservados - Espinola José Luis</p> -->
+            <p class="copyright">&copy; <span id="copyright-year"></span> 
+                Alquileres Gustavo - Todos los derechos reservados - 
+                <a href="https://portafoliojoseluis.netlify.app/" target="_blank">Espinola José Luis</a>
+            </p>
+
+            <script>
+                const currentYear = new Date().getFullYear();
+                document.getElementById('copyright-year').textContent = currentYear;
+            </script>
+         </div>
+    </footer>
+
+    <script src="/js/menu.js"></script>
+    <script src="/js/preguntas.js"></script>
+    <script src="/js/busqueda.js"></script>
+    <script src="/js/valid-contacto.js"></script>
+    <script src="https://kit.fontawesome.com/81581fb069.js"
+        crossorigin="anonymcus">
+    </script>
+    <script src="/js/scrollreveal.js"></script>
+</body>
+</html>
