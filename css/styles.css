@@ -24,9 +24,9 @@
     font-family: "Roboto Flex", sans-serif;
 }
 
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 nav {
     position: fixed;
@@ -1060,7 +1060,7 @@ textarea {
 }
 
 .box-footer {
-    min-width: 200px;
+    min-width: 140px;
     margin-inline: 16px;
 }
 
@@ -1323,6 +1323,19 @@ textarea {
     
     .card-pres {
         width: 100%;
+    }
+
+    .box-footer {
+        min-width: 120px;
+        margin-inline: 12px;
+    }
+
+    .title-box {
+        font-size: 16px;
+    }
+
+    .box-footer p, .box-footer a {
+        font-size: 14px;
     }
 }
 

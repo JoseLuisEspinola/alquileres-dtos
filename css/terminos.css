@@ -24,9 +24,9 @@
     font-family: "Roboto Flex", sans-serif;
 }
 
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 nav {
     position: fixed;
@@ -295,7 +295,7 @@ nav.abajo .checkbtn {
 }
 
 .box-footer {
-    min-width: 200px;
+    min-width: 140px;
     margin-inline: 16px;
 }
 
@@ -469,10 +469,21 @@ nav.abajo .checkbtn {
 
 
 /*************************************/
-/* ***** Media Query con 542px ***** */
+/* ***** Media Query con 516px ***** */
 /*************************************/
-@media (max-width: 542px) {
+@media (max-width: 516px) {
+    .box-footer {
+        min-width: 120px;
+        margin-inline: 12px;
+    }
 
+    .title-box {
+        font-size: 16px;
+    }
+
+    .box-footer p, .box-footer a {
+        font-size: 14px;
+    }
 }
 
 

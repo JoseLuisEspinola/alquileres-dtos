@@ -24,9 +24,9 @@
     font-family: "Roboto Flex", sans-serif;
 }
 
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 nav {
     position: fixed;
