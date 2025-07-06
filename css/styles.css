@@ -865,7 +865,11 @@ nav.abajo .checkbtn {
     z-index: 1;
     overflow: hidden;
 
+    /* border: 5px solid transparent;
+    border-image: linear-gradient(45deg, #f06, #4a90e2) 1; */
 }
+
+
 
 .btn-aprende:before,
 .btn-aprende:after {
