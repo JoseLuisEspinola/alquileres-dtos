@@ -458,6 +458,13 @@ div.contanier-nombres {
 /* ***** Media Query con 1368px ***** */
 /* ********************************** */
 @media (max-width: 1368px) {
+    
+}
+
+
+/*************************************/
+/* ***** Media Query con 1090px ***** */
+@media (max-width: 1090px) {
     .logo {
         height: 50px;
         width: 50px;
@@ -509,15 +516,6 @@ div.contanier-nombres {
     #check:checked ~ ul {
         left:0;
     }
-}
-
-
-/*************************************/
-/* ***** Media Query con 1090px ***** */
-@media (max-width: 1090px) {
-    .main-name {
-        font-size: 1.4rem;
-    } 
 }
 
 

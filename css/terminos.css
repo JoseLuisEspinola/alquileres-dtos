@@ -383,6 +383,13 @@ nav.abajo .checkbtn {
 /*************************************/
 /* ***** Media Query con 1368px ***** */
 @media (max-width: 1368px) {
+    
+}
+
+
+/*************************************/
+/* ***** Media Query con 1090px ***** */
+@media (max-width: 1090px) {
     .logo {
         height: 50px;
         width: 50px;
@@ -438,13 +445,6 @@ nav.abajo .checkbtn {
     .presentacion h1 {
         font-size: 4rem;
     }
-}
-
-
-/*************************************/
-/* ***** Media Query con 1090px ***** */
-@media (max-width: 1090px) {
-
 }
 
 
