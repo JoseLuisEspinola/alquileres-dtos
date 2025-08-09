@@ -327,7 +327,7 @@ nav.abajo .checkbtn {
     font-weight: 400;
 
     font-style: normal;
-    font-size: clamp(1.16rem, 3vw, 1.8rem);
+    font-size: clamp(1.152rem, 3vw, 1.8rem);
     color: var(--color03);
 
     /* efecto de escribir */
@@ -342,8 +342,6 @@ nav.abajo .checkbtn {
     66%  { width: 29ch; }      /* Pausa */
     100% { width: 0ch; }       /* Borra */
 }
-
-
 
 .container-logo img {
     margin: 20px auto;
@@ -490,8 +488,8 @@ nav.abajo .checkbtn {
     nav ul {
         position: fixed;
         width: 100%;
-        height: 80vh;   /*  */
-        background: rgba(44, 62, 80, 0.9);
+        height: 74vh;   /*  */
+        background: rgba(136, 165, 194, 0.9);
         top: 90px;
         left: -100%;
         margin: 0;

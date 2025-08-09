@@ -373,13 +373,15 @@ nav.abajo .checkbtn {
 
 .card-title h3 {
     color: #012f99;
-    font-size: 26px;
+    /* font-size: 26px; */
+    font-size: clamp(1.2rem, 3vw, 1.625rem);
     margin: 0;
 }
 
 .card-title h4 {
     color: var(--color03);
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: clamp(0.9rem, 3vw, 1.125rem);
     margin: 0;
 }
 
@@ -1184,8 +1186,8 @@ textarea {
     nav ul {
         position: fixed;
         width: 100%;
-        height: 80vh;   /*  */
-        background: rgba(44, 62, 80, 0.9);
+        height: 74vh;   /*  */
+        background: rgba(136, 165, 194, 0.9);
         top: 90px;
         left: -100%;
         margin: 0;
